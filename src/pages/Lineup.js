@@ -103,16 +103,37 @@ export default function Lineup({ bands }) {
 
         <div className="bg-concert-redish flex flex-row">
           <div className="flex flex-row p-4 gap">
-            <div className={`flex flex-row justify-center items-center text-black font-montserrat px-2 py-1 w-fit font-bold border-[3px] border-black text-sm phone:text-lg bg-concert-yellow mr-2`}>
-              {" "}
-              ALPHABETICAL <RiArrowDownSLine size={32} />
+            <div className={`flex flex-col justify-center items-center text-black font-montserrat px-2 py-1 w-fit font-bold border-[3px] border-black text-sm phone:text-lg bg-concert-yellow mr-2`}>
+              <div className={`flex flex-row justify-center items-center`}>
+                <div>ALPHABETICAL</div>
+                <RiArrowDownSLine
+                  type="button"
+                  size={32}
+                  onClick={() => {
+                    // setToggleSort(!toggleSort);
+                    <DropdownMenuAlphabetical />;
+                  }}
+                />
+              </div>
+              <div className="">
+                <div className=" bg-black px-[1.8rem] 2xl:px-[4.2rem] text-concert-yellow mb-3 mt-2">A-Z</div>
+                <div className=" bg-black px-[1.8rem] 2xl:px-[4.2rem] text-concert-yellow mb-2">Z-A</div>
+              </div>
             </div>
 
-            <div className={`flex flex-row justify-center items-center text-black font-montserrat px-2 py-1 w-fit font-bold border-[3px] border-black text-sm phone:text-lg bg-concert-yellow mr-2`}>
-              {" "}
-              GENRE <RiArrowDownSLine size={32} />
+            <div className={`flex flex-col justify-center items-center text-black font-montserrat px-2 py-1 w-fit font-bold border-[3px] border-black text-sm phone:text-lg bg-concert-yellow mr-2`}>
+              <div className={`flex flex-row justify-center items-center`}>
+                <div>GENRE </div>
+                <RiArrowDownSLine size={32} />
+              </div>
+              <div className="">
+                <div className=" bg-black px-[1.8rem] 2xl:px-[4.2rem] text-concert-yellow mb-2 mt-2">POP</div>
+                <div className=" bg-black px-[1.8rem] 2xl:px-[4.2rem] text-concert-yellow mb-2">ROCK</div>
+                <div className=" bg-black px-[1.8rem] 2xl:px-[4.2rem] text-concert-yellow mb-2">PUNK</div>
+                <div className=" bg-black px-[1.8rem] 2xl:px-[4.2rem] text-concert-yellow mb-2">JAZZ</div>
+                <div className=" bg-black px-[1.8rem] 2xl:px-[4.2rem] text-concert-yellow mb-2">BLUES</div>
+              </div>
             </div>
-
             <div class="form-floating  sm:w-auto xl:w-96">
               <input
                 type="password"
@@ -197,3 +218,48 @@ export function ImgSVG({ band, bgColor }) {
     </Link>
   );
 }
+
+function DropdownMenuAlphabetical({ toggle }) {
+  // if (!toggle) {
+  //   return null;
+  // }
+
+  return (
+    <div className="w-full bg-concert-l-dark px-4 pt-4 phone:px-8 top-0 flex flex-col items-end font-bold">
+      <div className="w-full bg-concert-yellow text-center hover:bg-concert-pink">A-Z</div>
+      <div className="w-full bg-concert-yellow text-center hover:bg-concert-pink">Z-A</div>
+    </div>
+  );
+}
+
+function DropdownMenuGenre() {
+  return (
+    <div className="w-full bg-concert-l-dark px-4 pt-4 phone:px-8 top-0 flex flex-col items-end font-bold">
+      <div className="w-fit ml-auto flex flex-col space-y-4 items-end ">
+        <div className="w-full px-8 bg-concert-b-green text-center hover:bg-concert-pink">pop</div>
+        <div className="w-full bg-concert-yellow text-center hover:bg-concert-pink">rock</div>
+        <div className="w-full bg-concert-yellow text-center hover:bg-concert-pink">punk</div>
+        <div className="w-full bg-concert-yellow text-center hover:bg-concert-pink">blues</div>
+        <p className="w-full text-center bg-concert-yellow">
+          <span>EN</span>/<span>DK</span>
+        </p>
+      </div>
+    </div>
+  );
+}
+
+const Search = () => {
+  console.log("this is working ");
+  let [toggleSort, setToggleSort] = useState(false);
+  <div
+    type="button"
+    onClick={() => {
+      setToggleSort(!toggleSort);
+    }}
+    className={`flex flex-row justify-center items-center text-black font-montserrat px-2 py-1 w-fit font-bold border-[3px] border-black text-sm phone:text-lg bg-concert-yellow mr-2`}
+  >
+    {" "}
+    ALPHABETICAL <RiArrowDownSLine size={32} />
+    <DropdownMenuAlphabetical toggle={toggleSort} />
+  </div>;
+};
