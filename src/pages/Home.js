@@ -8,6 +8,7 @@ import Stages from "../components/Stages";
 import Passes from "../components/Passes";
 import Sponsors from "../components/Sponsors";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 const urlSlugMatch = require("url-slug-match");
 
 export default function Home({
@@ -31,13 +32,38 @@ export default function Home({
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-acier ht-auto">
             20-27 Jul 2022
           </h1>
-          <h3 className="text-md sm:text-3xl font-aciersolid lg:text-4xl lg:font-acier">
-            #Music #Dance #Love
-          </h3>
-          <p className="hidden sm:block text-xs sm:text-base lg:text-xl font-semibold">
-            Get ready for the world’s biggest music festival.
-            <br></br> 126 bands on 3 stages in 7 days.{" "}
-          </p>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              delay: 1,
+              duration: 1,
+              times: [0, 0.2, 1],
+              repeat: 0,
+            }}
+          >
+            <h3 className="text-md sm:text-3xl font-aciersolid lg:text-4xl lg:font-acier">
+              #Music #Dance #Love
+            </h3>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              delay: 2,
+              duration: 1,
+              times: [0, 0.2, 1],
+              repeat: 0,
+            }}
+          >
+            <p className="hidden sm:block text-xs sm:text-base lg:text-xl font-semibold">
+              Get ready for the world’s biggest music festival.
+              <br></br> 126 bands on 3 stages in 7 days.{" "}
+            </p>
+          </motion.div>
         </div>
       </header>
       <Content>
@@ -96,14 +122,14 @@ export function HomeLineUp({ lineUp }) {
   const lineupRows = lineUp.split("|");
 
   return (
-    <article className=" font-aciersolid md:font-acier bg-concert-yellow text-black px-4 phone:px-8 pt-[5vw] pb-[4vw] w-full h-auto space-y-12">
+    <article className="font-acier bg-concert-yellow text-black px-4 phone:px-8 pt-[5vw] pb-[4vw] w-full h-auto space-y-12">
       <ul className="grid">
         {lineupRows.map((row, index) => (
           <li
             key={`row${index}`}
             className={`text-${
               7 - index
-            }rem justify-center whitespace-normal flex flex-wrap`}
+            }rem justify-center whitespace-normal flex flex-wrap `}
           >
             <BandLink bandsString={row} />
           </li>

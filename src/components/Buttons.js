@@ -3,7 +3,7 @@ import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
 export function Button1({ label }) {
   return (
     <div
-      className={`text-black font-montserrat px-4 py-1 w-fit font-bold border-[3px] border-black text-sm phone:text-lg bg-concert-b-green hover:bg-concert-pink`}
+      className={`bg-concert-b-green justify-items-center hover:bg-concert-pink text-black font-montserrat px-4 py-1 w-fit font-bold text-xs phone:text-sm `}
     >
       {label}
     </div>
@@ -13,7 +13,7 @@ export function Button1({ label }) {
 export function Button2({ label, bgcolor }) {
   return (
     <div
-      className={`text-black font-montserrat px-4 py-1 w-fit font-bold border-[3px] hover:bg-black hover:text-concert-yellow border-black text-sm phone:text-xl bg-${bgcolor}`}
+      className={`text-black justify-items-center font-montserrat px-4 py-1 w-fit font-bold hover:bg-black hover:text-concert-yellow text-sm phone:text-xl bg-${bgcolor}`}
     >
       {label}
     </div>
@@ -28,7 +28,7 @@ Button2.defaultProps = {
 export function Button3({ label, buttonThreeBg }) {
   return (
     <div
-      className={`text-[0.6rem] text-black bg-${buttonThreeBg} whitespace-pre font-montserrat px-4 py-1 w-fit font-bold border-[3px] border-black text-sm sm:text-sm`}
+      className={`text-[0.6rem] justify-items-center text-black bg-${buttonThreeBg} whitespace-pre font-montserrat px-4 py-1 w-fit font-bold  text-sm sm:text-sm`}
     >
       {label}
     </div>
@@ -43,7 +43,7 @@ Button3.defaultProps = {
 export function SeeDetailButton({ label, bgcolor }) {
   return (
     <div
-      className={`pr-2 whitespace-pre sm:text-black font-montserrat w-fit h-fit font-bold border-[2px] border-black text-xs bg-${bgcolor} `}
+      className={`pr-2 justify-items-center whitespace-pre sm:text-black font-montserrat w-fit h-fit font-bold text-xs bg-${bgcolor} `}
     >
       <ul className="flex items-center space-x-1">
         <li>
@@ -62,7 +62,7 @@ SeeDetailButton.defaultProps = {
 export function SeeDetailButtonUp({ label, bgcolor }) {
   return (
     <div
-      className={`pr-2 whitespace-pre text-sm sm:text-black font-montserrat w-fit font-bold border-[2px] border-black text-xs bg-${bgcolor}`}
+      className={`pr-2 justify-items-center whitespace-pre text-sm sm:text-black font-montserrat w-fit font-bold text-xs bg-${bgcolor}`}
     >
       <ul className="flex items-center space-x-1">
         <li>
@@ -81,7 +81,7 @@ SeeDetailButtonUp.defaultProps = {
 export function DetailButton({ label, bgcolor }) {
   return (
     <div
-      className={`text-black font-montserrat px-7 w-fit font-bold border-[3px] border-black text-lg bg-${bgcolor}`}
+      className={`text-black justify-items-center font-montserrat px-7 w-fit font-bold text-lg bg-${bgcolor}`}
     >
       <div className="flex items-center ">{label}</div>
     </div>

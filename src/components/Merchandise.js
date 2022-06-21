@@ -1,6 +1,7 @@
 import Merch from "../img/merch.png";
 import { Button3 } from "./Buttons";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function Merchandise() {
   return (
@@ -13,13 +14,28 @@ export default function Merchandise() {
         />
       </div>
       <div className="w-2/4 p-2 md:p-14  ">
-        <h1 className="text-xl flex flex-col font-acier text-black whitespace-pre sm:text-4xl lg:text-5xl ">
-          Merchandise
-        </h1>
-        <p className="text-sm sm:text-base">
-          Festival products can be purchased at the official webshop as well as
-          at the festival.
-        </p>
+        <div>
+          <h1 className="text-xl flex flex-col font-acier text-black whitespace-pre sm:text-4xl lg:text-5xl ">
+            Merchandise
+          </h1>
+        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            ease: "easeInOut",
+            delay: 1,
+            duration: 1,
+            times: [0, 0.2, 1],
+            repeat: 0,
+          }}
+        >
+          <p className="text-sm sm:text-base">
+            Festival products can be purchased at the official webshop as well
+            as at the festival.
+          </p>
+        </motion.div>
+
         <div className="text-sm pt-4">
           <Link to="/schedule">
             <Button3 label="GET MERCH" buttonThreeBg="concert-yellow" />

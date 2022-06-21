@@ -32,44 +32,44 @@ export default function Sponsors() {
             <img className="scale-75" src={Glo} alt="" />
           </span>
         </span>
-        <span className=" flex row w-3/5 place-self-center pt-2 pb-2">
+        <span className=" flex row w-4/5 place-self-center pt-2 pb-2">
           <span>
-            <img className="scale-50" src={Master} alt="" />
-          </span>
-          <span>
-            <img className="scale-50" src={Eon} alt="" />
-          </span>
-          <span>
-            <img className="scale-50" src={Cola} alt="" />
-          </span>
-          <span>
-            <img className="scale-50" src={Glo} alt="" />
-          </span>
-          <span>
-            <img className="scale-50" src={Eon} alt="" />
-          </span>
-        </span>
-        <span className=" flex row w-3/5 place-self-center space-x-4">
-          <span>
-            <img className="scale-75" src={Eon} alt="" />
-          </span>
-          <span>
-            <img className="scale-75" src={Glo} alt="" />
-          </span>
-          <span className="w-auto h-8">
-            <img className="scale-75" src={Bank} alt="" />
+            <img className="scale-75" src={Master} alt="" />
           </span>
           <span>
             <img className="scale-75" src={Eon} alt="" />
-          </span>
-          <span>
-            <img className="scale-75" src={Lidl} alt="" />
           </span>
           <span>
             <img className="scale-75" src={Cola} alt="" />
           </span>
           <span>
+            <img className="scale-75" src={Glo} alt="" />
+          </span>
+          <span>
             <img className="scale-75" src={Eon} alt="" />
+          </span>
+        </span>
+        <span className=" flex row w-4/5 place-self-center space-x-4">
+          <span>
+            <img className="scale-100" src={Eon} alt="" />
+          </span>
+          <span>
+            <img className="scale-100" src={Glo} alt="" />
+          </span>
+          <span className="w-auto h-8">
+            <img className="scale-100" src={Bank} alt="" />
+          </span>
+          <span>
+            <img className="scale-100" src={Eon} alt="" />
+          </span>
+          <span>
+            <img className="scale-100" src={Lidl} alt="" />
+          </span>
+          <span>
+            <img className="scale-100" src={Cola} alt="" />
+          </span>
+          <span>
+            <img className="scale-100" src={Eon} alt="" />
           </span>
         </span>
       </div>

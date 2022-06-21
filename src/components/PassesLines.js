@@ -88,10 +88,8 @@ export default function PassesLines({
 
   return (
     <li className="w-full font-bold">
-      <div className="w-full md:h-16 bg-concert-bg border-[3px] border-black flex">
-        <div
-          className={`h-full w-10 bg-${bgPasses} border-r-[2px] border-black hidden md:block`}
-        ></div>
+      <div className="w-full md:h-16 bg-concert-bg flex">
+        <div className={`h-full w-10 bg-${bgPasses} hidden md:block`}></div>
         <div className="relative px-3 py-2 md:py-0 justify-between w-full flex flex-col md:flex-row h-full gap-y-6 overflow-hidden">
           <div className=" flex text-xs items-center pb-1 space-x-10 sm:text-sm">
             <div className=" w-32 md:w-40">
@@ -118,7 +116,7 @@ export default function PassesLines({
             onSubmit={handleSubmit}
           >
             {itemAdded ? (
-              <label className="flex items-center h-8 px-1 bg-concert-yellow border-black border-[2px] selectQuantity">
+              <label className="flex items-center h-8 px-1 bg-concert-yellow selectQuantity">
                 <AiOutlineMinusCircle className="text-xl" />
                 <input
                   disabled
@@ -134,7 +132,7 @@ export default function PassesLines({
                 <AiOutlinePlusCircle className="text-xl" />
               </label>
             ) : (
-              <label className="flex items-center h-8 px-1 bg-concert-yellow border-black border-[2px] selectQuantity">
+              <label className="flex items-center h-8 px-1 bg-concert-yellow selectQuantity">
                 <AiOutlineMinusCircle
                   className="text-xl cursor-pointer"
                   onClick={() =>
