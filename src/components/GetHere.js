@@ -6,6 +6,7 @@ export default function GetHere() {
   return (
     <article className="flex flex-col items-center w-full h-auto bg-concert-yellow text-black 2xl:px-36 ">
       <div className="w-2/4 p-8 md:p-14  ">
+<<<<<<< HEAD
         <div>
           <h1
             className="text-left font-acier text-3xl text-black whitespace-pre
@@ -35,6 +36,16 @@ export default function GetHere() {
           </p>
         </motion.div>
 
+=======
+        <h1 className="flex flex-col font-acier text-black whitespace-pre phone: text-4xl sm:text-5xl md:text-6xl">
+          GET HERE <br />
+          STAY HERE
+        </h1>
+        <p className="text-sm sm:text-base">
+          We offer five locations, depending on your social and life
+          preferences, as well as two types of tents.
+        </p>
+>>>>>>> 4d9b17e4fcadf2cea765382512c1d02565687255
         <div className="text-sm pt-4">
           <Link to="/shop">
             <Button3 label="SEE ALL CAMPS" buttonThreeBg="concert-redish" />

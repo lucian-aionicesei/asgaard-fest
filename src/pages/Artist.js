@@ -4,9 +4,9 @@ import { BsInstagram } from "react-icons/bs";
 import { BsSpotify } from "react-icons/bs";
 import { ImSoundcloud } from "react-icons/im";
 import useFetch from "../hooks/useFetch";
-import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
-import { Result } from "postcss";
+import { Link } from "react-router-dom";
+// import { useState } from "react";
+// import { Result } from "postcss";
 const urlSlugMatch = require("url-slug-match");
 
 export default function Artist({ bands, schedule }) {
@@ -23,7 +23,7 @@ export default function Artist({ bands, schedule }) {
   let DisplayVanaheim = [];
   let DisplayJotunheim = [];
 
-  const [currentStage, setCurrentStage] = useState();
+  // const [currentStage, setCurrentStage] = useState();
 
   let DisplayMidgardSliced = [];
 
@@ -165,7 +165,7 @@ export default function Artist({ bands, schedule }) {
       </div>
       <div>
         <div>
-          <h3 className="text-7xl text-black mb-8 sm:text-7xl  font-acier bg-concert-pink flex justify-center py-6 px-6 lg:py-16 px-16 xl:text-[114px] xl:py-10 px-10">Midgard</h3>
+          <h3 className="text-7xl text-black mb-8 sm:text-7xl  font-acier bg-concert-pink flex justify-center py-6 px-6 lg:py-16  xl:text-[114px] xl:py-10 ">Midgard</h3>
           <ul className="w-full grid gap-4 grid-cols-2 grid-rows-2 md:grid-cols-3 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-3 xl:grid-cols-4 xl:grid-rows-2 ">
             {data &&
               DisplayMidgardSliced.map((band, index) => (
@@ -223,7 +223,7 @@ export function ImgJPGSuggestons({ band, bgColor }) {
     <Link to={`/artist/${urlSlugMatch(band.name.trim())}`} band={band}>
       <div className="grid gap-x-8">
         <div className="h-[11rem] lg:h-[18rem] ">
-          <img src={`./images/logos/${band.logo}`} className="object-cover w-full  h-[12rem] lg:h-[18rem]" alt={band.name}></img>
+          <img src={`/images/logos/${band.logo}`} className="object-cover w-full  h-[12rem] lg:h-[18rem]" alt={band.name}></img>
         </div>
 
         <div className={`bg-${bgColor} font-aciersolid text-center text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-4xl h-[4rem] flex justify-center items-center text-black lg:h-[6rem]`}>{band.name}</div>
