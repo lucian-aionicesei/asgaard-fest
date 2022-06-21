@@ -37,7 +37,7 @@ export default function Home({
             whileInView={{ opacity: 1 }}
             transition={{
               ease: "easeInOut",
-              delay: 1,
+              delay: 1.5,
               duration: 1,
               times: [0, 0.2, 1],
               repeat: 0,

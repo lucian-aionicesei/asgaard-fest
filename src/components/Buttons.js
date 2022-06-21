@@ -62,11 +62,7 @@ SeeDetailButton.defaultProps = {
 export function SeeDetailButtonUp({ label, bgcolor }) {
   return (
     <div
-<<<<<<< HEAD
       className={`pr-2 justify-items-center whitespace-pre text-sm sm:text-black font-montserrat w-fit font-bold text-xs bg-${bgcolor}`}
-=======
-      className={`pr-2 whitespace-pre sm:text-black font-montserrat w-fit font-bold border-[2px] border-black text-xs bg-${bgcolor}`}
->>>>>>> 4d9b17e4fcadf2cea765382512c1d02565687255
     >
       <ul className="flex items-center space-x-1">
         <li>

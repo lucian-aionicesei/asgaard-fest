@@ -5,6 +5,7 @@ import { Button1 } from "./Buttons";
 import { useState, useEffect } from "react";
 import useWindowDimensions from "../hooks/getWindowDimensions";
 import CountdownTimer from "../components/CountdownTimer";
+import { motion } from "framer-motion";
 
 export default function Header({ countdown, counterTime }) {
   const [dropDown, setDropDown] = useState(false);
@@ -100,9 +101,22 @@ export default function Header({ countdown, counterTime }) {
             </li>
           </ul>
           <div className="flex items-center md:pb-1 leading-8 space-x-2 phone:space-x-4 md:space-x-8">
-            <Link to={"/shop"} className="hidden phone:block">
-              <Button1 label="Buy ticket" />
-            </Link>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{
+                ease: "easeInOut",
+                delay: 0.5,
+                duration: 1,
+                times: [0, 0.2, 1],
+                repeat: 0,
+              }}
+            >
+              <Link to={"/shop"} className="hidden phone:block">
+                <Button1 label="Buy ticket" />
+              </Link>
+            </motion.div>
+
             <Link to={"/purchases"}>
               {/* <div className="flex items-center space-x-6 pl-2 bg-red-500">
               <p className="text-black">09:15 to complete order</p>
